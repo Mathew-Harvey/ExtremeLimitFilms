@@ -1,430 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Extreme Limit Films specializes in FPV drone filming of drift, burnout, motocross, and downhill mountain biking events.">
-    <meta name="keywords" content="FPV Drone, Filming, Drift, Burnout, Motocross, Mountain Biking, Extreme Limit Films">
-    <title>Extreme Limit Films</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="icon" href="./assets/images/logoZoom.png" type="image/x-icon">
-
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navigation */
-        .navbar {
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand img {
-            height: 60px;
-            /* Larger logo */
-            margin-right: 10px;
-        }
-
-        .navbar-nav .nav-link {
-            font-weight: 600;
-            margin: 0 0.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            background: url('./assets/images/hero-banner.jpg') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-        }
-
-        /* Section Padding */
-        section {
-            padding: 60px 0;
-        }
-
-        /* Highlights Gallery */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .gallery .col-md-4 {
-            margin-bottom: 30px;
-        }
-
-        .video-thumbnail img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .video-thumbnail:hover img {
-            transform: scale(1.05);
-        }
-
-        /* About Us */
-        .about-img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Contact Form */
-        .contact-form label {
-            font-weight: 600;
-        }
-
-        /* Footer */
-        footer {
-            background: #222;
-            color: #ddd;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #ff5722;
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #e64a19;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Extreme Limit Films specializes in FPV drone filming of drift, burnout, motocross, and downhill mountain biking events.">
+  <meta name="keywords" content="FPV Drone, Filming, Drift, Burnout, Motocross, Mountain Biking, Extreme Limit Films">
+  <title>Extreme Limit Films</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="./assets/images/logoZoom.png" type="image/x-icon">
+  <style>
+    :root {
+      --primary-color: #ff5722;
+      --primary-hover: #e64a19;
+      --dark-color: #222;
+      --light-bg: #f4f4f4;
+      --text-color: #333;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--light-bg);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:focus {
+      outline: 3px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+    /* Skip Navigation */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    /* Navigation */
+    header nav.navbar {
+      padding: 1rem 2rem;
+    }
+    .navbar-brand img {
+      height: 60px;
+      margin-right: 10px;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url('./assets/images/hero-banner.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Section Padding */
+    section {
+      padding: 60px 0;
+    }
+    /* Highlights Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery .col-md-4,
+    .gallery .col-sm-6 {
+      margin-bottom: 30px;
+    }
+    .video-thumbnail img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .video-thumbnail:hover img,
+    .video-thumbnail:focus img {
+      transform: scale(1.05);
+    }
+    /* About Us */
+    .about-img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    /* Contact Form */
+    .contact-form label {
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      color: #fff;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover,
+    .contact-form button:focus {
+      background-color: var(--primary-hover);
+    }
+    /* Footer */
+    footer {
+      background: var(--dark-color);
+      color: #ddd;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navigation -->
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  
+  <!-- Header and Navigation -->
+  <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/images/logoZoom.png" alt="Extreme Limit Films Logo"> Extreme Limit Films
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logoZoom.png" alt="Extreme Limit Films Logo"> Extreme Limit Films
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
-
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <h1>Welcome to Extreme Limit Films</h1>
-            <p>Capturing high-adrenaline moments with FPV drone technology.</p>
-            <a href="#contact" class="btn btn-primary btn-lg mt-4">Get In Touch</a>
-        </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>Welcome to Extreme Limit Films</h1>
+        <p>Capturing high-adrenaline moments with FPV drone technology.</p>
+        <a href="#contact" class="btn btn-primary btn-lg mt-4">Get In Touch</a>
+      </div>
     </section>
-
+    
     <!-- Live Stream Section -->
     <section class="container">
-        <div class="row">
-            <div class="col-12 mb-4">
-                <h2 class="text-center">Live Stream</h2>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QVrLE1LQ2-4"
-                        allowfullscreen title="YouTube Live Stream"></iframe>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-12 mb-4">
+          <h2 class="text-center">Live Stream</h2>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QVrLE1LQ2-4"
+              allowfullscreen title="YouTube Live Stream" loading="lazy"></iframe>
+          </div>
         </div>
+      </div>
     </section>
-
+    
     <!-- Highlights Gallery Section -->
     <section id="highlights" class="container">
-        <h2 class="text-center">Recent Highlights</h2>
-        <div class="row gallery">
-            <!-- Video 1 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/4002085700075918" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights001.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 2 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1557150398317523" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights002.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 3 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2033268543844124" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights003.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 4 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1407787753124844" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights004.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 5 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/757066262107797" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights005.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 6 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/799807070739507" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights006.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 7 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2729758130649517" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights007.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 8 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1610791192418915" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights008.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 9 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/458870808608110" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights009.png" alt="Video Thumbnail">
-                </a>
-            </div>
-            <!-- Video 10 -->
-            <div class="col-sm-6 col-md-4">
-                <a href="#" class="video-thumbnail"
-                    data-video="https://www.facebook.com/ExtremeLimitFilms/videos/766351070982162" data-toggle="modal"
-                    data-target="#videoModal">
-                    <img src="./assets/images/highlights010.png" alt="Video Thumbnail">
-                </a>
-            </div>
+      <h2 class="text-center">Recent Highlights</h2>
+      <div class="row gallery">
+        <!-- Video 1 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/4002085700075918" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights001.png" alt="Video Thumbnail 1" loading="lazy">
+          </a>
         </div>
+        <!-- Video 2 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1557150398317523" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights002.png" alt="Video Thumbnail 2" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 3 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2033268543844124" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights003.png" alt="Video Thumbnail 3" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 4 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1407787753124844" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights004.png" alt="Video Thumbnail 4" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 5 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/757066262107797" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights005.png" alt="Video Thumbnail 5" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 6 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/799807070739507" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights006.png" alt="Video Thumbnail 6" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 7 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2729758130649517" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights007.png" alt="Video Thumbnail 7" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 8 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1610791192418915" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights008.png" alt="Video Thumbnail 8" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 9 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/458870808608110" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights009.png" alt="Video Thumbnail 9" loading="lazy">
+          </a>
+        </div>
+        <!-- Video 10 -->
+        <div class="col-sm-6 col-md-4">
+          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/766351070982162" data-toggle="modal"
+            data-target="#videoModal">
+            <img src="./assets/images/highlights010.png" alt="Video Thumbnail 10" loading="lazy">
+          </a>
+        </div>
+      </div>
     </section>
-
+    
     <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="videoModalLabel">Watch Video</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="videoModalIframe" allowfullscreen
-                            title="Facebook Video"></iframe>
-                    </div>
-                </div>
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalLabel">Watch Video</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="videoModalIframe" allowfullscreen title="Facebook Video"></iframe>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
+    
     <!-- About Us Section -->
     <section id="about" class="bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-2">
-                    <h2>About Us</h2>
-                    <p>Extreme Limit Films is a premier FPV drone filming company specializing in high-octane events
-                        like drift, burnout, motocross, and downhill mountain biking. Our mission is to capture the
-                        adrenaline and precision of every event through innovative and cinematic perspectives.</p>
-                </div>
-                <div class="col-md-6 order-md-1">
-                    <img src="./assets/images/about-photo.jpg" alt="Our Team in Action" class="about-img">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <h2>About Us</h2>
+            <p>Extreme Limit Films is a premier FPV drone filming company specializing in high-octane events like drift, burnout, motocross, and downhill mountain biking. Our mission is to capture the adrenaline and precision of every event through innovative and cinematic perspectives.</p>
+          </div>
+          <div class="col-md-6 order-md-1">
+            <img src="./assets/images/about-photo.jpg" alt="Our Team in Action" class="about-img" loading="lazy">
+          </div>
         </div>
+      </div>
     </section>
-
+    
     <!-- Services Section -->
     <section id="services">
-        <div class="container">
-            <h2 class="text-center">Our Services</h2>
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <h3>FPV Drone Filming</h3>
-                    <p>Dynamic FPV drone filming for drift, burnout, motocross, and mountain biking events. Experience
-                        action like never before.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Event Coverage</h3>
-                    <p>We capture every thrilling moment of high-energy events, ensuring every detail is recorded from
-                        unique perspectives.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Post-Production</h3>
-                    <p>Expert editing and color grading to deliver cinematic-quality videos that bring events to life.
-                    </p>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <h3>Our Equipment</h3>
-                    <p>Utilizing state-of-the-art FPV drones, stabilization systems, and advanced editing tools to
-                        provide innovative footage.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row text-center mt-4">
+          <div class="col-md-4">
+            <h3>FPV Drone Filming</h3>
+            <p>Dynamic FPV drone filming for drift, burnout, motocross, and mountain biking events. Experience action like never before.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Event Coverage</h3>
+            <p>We capture every thrilling moment of high-energy events, ensuring every detail is recorded from unique perspectives.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Post-Production</h3>
+            <p>Expert editing and color grading to deliver cinematic-quality videos that bring events to life.</p>
+          </div>
         </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <h3>Our Equipment</h3>
+            <p>Utilizing state-of-the-art FPV drones, stabilization systems, and advanced editing tools to provide innovative footage.</p>
+          </div>
+        </div>
+      </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="bg-light">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form name="contact" method="POST" data-netlify="true" action="/success">
-                <!-- This hidden input is automatically added during the Netlify build -->
-                <input type="hidden" name="form-name" value="contact" />
-
-                <p>
-                    <label>Your Name:
-                        <input type="text" name="name" required />
-                    </label>
-                </p>
-
-                <p>
-                    <label>Your Email:
-                        <input type="email" name="email" required />
-                    </label>
-                </p>
-
-                <p>
-                    <label>Message:
-                        <textarea name="message" required></textarea>
-                    </label>
-                </p>
-
-                <!-- (Optional) Honeypot for spam prevention -->
-                <p style="display:none;">
-                    <label>Don’t fill this out if you're human:
-                        <input type="text" name="bot-field" />
-                    </label>
-                </p>
-
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
-            <div class="col-md-6">
-                <h3>Our Location</h3>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.702194790683!2d115.79392131532598!3d-31.95231288135945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a362cfb1e807%3A0x5017d681632cf0!2sPerth%20WA%2C%20Australia!5e0!3m2!1sen!2sus!4v1690872191191!5m2!1sen!2sus"
-                        allowfullscreen="" aria-hidden="false" tabindex="0" title="Google Map Location"></iframe>
-                </div>
-                <div class="mt-3 text-center">
-                    <a href="https://www.facebook.com/YourPage" target="_blank" class="mr-2">Facebook</a>
-                    <a href="https://www.instagram.com/YourProfile" target="_blank" class="mr-2">Instagram</a>
-                    <a href="https://www.youtube.com/channel/YourChannel" target="_blank">YouTube</a>
-                </div>
-            </div>
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form name="contact" method="POST" data-netlify="true" action="/success" class="contact-form">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required aria-required="true"></textarea>
+          </div>
+          <!-- Honeypot for spam prevention -->
+          <div style="display:none;">
+            <label>Don’t fill this out if you're human:
+              <input type="text" name="bot-field">
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+        <div class="mt-5">
+          <h3 class="text-center">Our Location</h3>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.702194790683!2d115.79392131532598!3d-31.95231288135945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a362cfb1e807%3A0x5017d681632cf0!2sPerth%20WA%2C%20Australia!5e0!3m2!1sen!2sus!4v1690872191191!5m2!1sen!2sus" allowfullscreen aria-hidden="false" tabindex="0" title="Google Map Location" loading="lazy"></iframe>
+          </div>
+          <div class="mt-3 text-center">
+            <a href="https://www.facebook.com/YourPage" target="_blank" class="mr-2">Facebook</a>
+            <a href="https://www.instagram.com/YourProfile" target="_blank" class="mr-2">Instagram</a>
+            <a href="https://www.youtube.com/channel/YourChannel" target="_blank">YouTube</a>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
-
+    
     <!-- Facebook Live Section -->
     <section id="facebook-live">
-        <div class="container">
-            <h2 class="text-center">Facebook Live</h2>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe
-                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ExtremeLimitFilms/videos/924996816098688/&show_text=0&width=560"
-                    width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowTransparency="true" allow="encrypted-media" allowFullScreen="true"
-                    title="Facebook Live Video"></iframe>
-            </div>
+      <div class="container">
+        <h2 class="text-center">Facebook Live</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ExtremeLimitFilms/videos/924996816098688/&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true" title="Facebook Live Video" loading="lazy"></iframe>
         </div>
+      </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Extreme Limit Films. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.video-thumbnail').on('click', function (e) {
-                e.preventDefault();
-                var videoUrl = $(this).data('video');
-                var embedUrl = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(videoUrl) + '&show_text=0&width=560';
-                $('#videoModalIframe').attr('src', embedUrl);
-            });
-            $('#videoModal').on('hidden.bs.modal', function () {
-                $('#videoModalIframe').attr('src', '');
-            });
-        });
-    </script>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Extreme Limit Films. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.video-thumbnail').on('click', function (e) {
+        e.preventDefault();
+        var videoUrl = $(this).data('video');
+        var embedUrl = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(videoUrl) + '&show_text=0&width=560';
+        $('#videoModalIframe').attr('src', embedUrl);
+      });
+      $('#videoModal').on('hidden.bs.modal', function () {
+        $('#videoModalIframe').attr('src', '');
+      });
+    });
+  </script>
 </body>
-
 </html>
