@@ -1,418 +1,412 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Extreme Limit Films specializes in FPV drone filming of drift, burnout, motocross, and downhill mountain biking events.">
-  <meta name="keywords" content="FPV Drone, Filming, Drift, Burnout, Motocross, Mountain Biking, Extreme Limit Films">
-  <title>Extreme Limit Films</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" href="./assets/images/logoZoom.png" type="image/x-icon">
-  <style>
-    :root {
-      --primary-color: #ff5722;
-      --primary-hover: #e64a19;
-      --dark-color: #222;
-      --light-bg: #f4f4f4;
-      --text-color: #333;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--light-bg);
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    a:focus {
-      outline: 3px solid var(--primary-color);
-      outline-offset: 2px;
-    }
-    /* Skip Navigation */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--primary-color);
-      color: #fff;
-      padding: 8px;
-      z-index: 100;
-    }
-    .skip-link:focus {
-      top: 0;
-    }
-    /* Navigation */
-    header nav.navbar {
-      padding: 1rem 2rem;
-    }
-    .navbar-brand img {
-      height: 90px; /* Increased logo size */
-      margin-right: 10px;
-    }
-    .navbar-nav .nav-link {
-      font-weight: 600;
-      margin: 0 0.5rem;
-    }
-    /* Hero Section */
-    .hero {
-      position: relative;
-      background: url('./assets/images/hero-banner.jpg') no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    /* Section Padding */
-    section {
-      padding: 60px 0;
-    }
-    /* Highlights Gallery */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .gallery .col-md-4,
-    .gallery .col-sm-6 {
-      margin-bottom: 30px;
-    }
-    .video-thumbnail img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-    .video-thumbnail:hover img,
-    .video-thumbnail:focus img {
-      transform: scale(1.05);
-    }
-    /* About Us */
-    .about-img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    /* Contact Form */
-    .contact-form label {
-      font-weight: 600;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.25rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .contact-form button {
-      background-color: var(--primary-color);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      color: #fff;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    .contact-form button:hover,
-    .contact-form button:focus {
-      background-color: var(--primary-hover);
-    }
-    /* Footer */
-    footer {
-      background: var(--dark-color);
-      color: #ddd;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FPV drone filming in Perth · Extreme Limit Films</title>
+<meta name="description" content="Extreme Limit Films is a CASA-certified FPV drone crew from Perth. We film motorsport, action sport and the Western Australian coast, and we broadcast events live.">
+<!-- Preview build. Remove the next line when the copy is approved and the site moves to its own domain. -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090C">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Extreme Limit Films">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="FPV drone filming and live broadcast in Perth">
+<meta property="og:description" content="A CASA-certified FPV drone crew from Perth. Motorsport, action sport and the Western Australian coast, on film and broadcast live.">
+<!-- Social previews need a full address. Update it when the domain changes. -->
+<meta property="og:image" content="https://mathew-harvey.github.io/ExtremeLimitFilms/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/archivo-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.className = 'js';</script>
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
-  <!-- Skip Navigation -->
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  
-  <!-- Header and Navigation -->
-  <header>
-    <!-- Changed navbar-dark bg-dark to navbar-light bg-white for white background -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/images/logoZoom.png" alt="Extreme Limit Films Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <a class="brand" href="#top" aria-label="Extreme Limit Films, back to top">
+    <img src="assets/img/logo-mark.png" width="40" height="34" alt="">
+    <span class="brand__name"><b>Extreme Limit</b><i>Films</i></span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#films">Films</a>
+    <a href="#live">Live</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a class="btn btn--line btn--sm" href="#enquire">Get a quote</a>
+  </nav>
+  <button class="menu-btn" type="button" aria-haspopup="dialog" aria-controls="menu">Menu</button>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="hero__stage">
+    <div class="hero__slide is-on">
+      <img src="assets/img/hero/drift.jpg" width="1280" height="720" alt="FPV drone chasing two drift cars through a corner at Barbagallo Raceway" fetchpriority="high">
+      <video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" data-src="assets/video/hero/drift.mp4"></video>
+    </div>
+    <div class="hero__slide">
+      <img src="assets/img/hero/coast-thumb.jpg" data-full="assets/img/hero/coast.jpg" width="1600" height="900" alt="FPV drone flying along the sea cliffs at Steep Point">
+      <video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" data-src="assets/video/hero/coast.mp4"></video>
+    </div>
+    <div class="hero__slide">
+      <img src="assets/img/hero/jet-sprint-thumb.jpg" data-full="assets/img/hero/jet-sprint.jpg" width="1600" height="900" alt="FPV drone chasing a jet sprint boat around a course at night">
+      <video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" data-src="assets/video/hero/jet-sprint.mp4"></video>
+    </div>
+    <div class="hero__slide">
+      <img src="assets/img/hero/trail-thumb.jpg" data-full="assets/img/hero/trail.jpg" width="1280" height="720" alt="FPV drone following a mountain bike rider down a red dirt trail">
+      <video muted playsinline preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" data-src="assets/video/hero/trail.mp4"></video>
+    </div>
+    <div class="hero__shade"></div>
+  </div>
+
+  <div class="hero__copy">
+    <h1><span class="hero__kicker"><span>FPV drone filming and live broadcast</span> <i aria-hidden="true">·</i> <span>Perth, Western Australia</span></span> A closer look at the action.</h1>
+    <p class="hero__sub">Extreme Limit Films is a CASA-certified FPV drone crew from Perth. We film motorsport, action sport and the Western Australian coast, and we broadcast events live.</p>
+    <p class="hero__cta"><a class="btn" href="#enquire">Get a quote</a><a class="btn btn--ghost" href="#films">Watch the films</a></p>
+  </div>
+
+  <div class="reel" role="group" aria-label="Footage on screen">
+    <div class="reel__now">
+      <p class="reel__label">Now showing</p>
+      <button class="reel__pause" type="button" aria-label="Pause the footage">
+        <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 5h3.4v14H7zM13.6 5H17v14h-3.4z" fill="currentColor"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      <p class="reel__film">
+        <button type="button" data-open-film="drift-west" aria-label="Play the film Drift West"><span data-now-title>Drift West</span><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+        <span data-now-meta>Outlaw Series round 3&nbsp;· Barbagallo Raceway</span>
+      </p>
+    </div>
+    <div class="reel__picks">
+      <button type="button" class="pick is-on" aria-pressed="true" data-film="drift-west" data-title="Drift West" data-meta="Outlaw Series round 3&nbsp;· Barbagallo Raceway"><span class="pick__bar"><i></i></span><img src="assets/img/hero/drift-thumb.jpg" width="240" height="135" alt=""><span class="pick__label"><small>Drift</small> Drift West</span></button>
+      <button type="button" class="pick" aria-pressed="false" data-film="steep-point" data-title="Steep Point" data-meta="The westernmost point of mainland Australia"><span class="pick__bar"><i></i></span><img src="assets/img/hero/coast-thumb.jpg" width="240" height="135" alt=""><span class="pick__label"><small>Coast</small> Steep Point</span></button>
+      <button type="button" class="pick" aria-pressed="false" data-film="the-kraken" data-title="The Kraken" data-meta="West Coast Jet Sprint Club"><span class="pick__bar"><i></i></span><img src="assets/img/hero/jet-sprint-thumb.jpg" width="240" height="135" alt=""><span class="pick__label"><small>Jet sprint</small> The Kraken</span></button>
+      <button type="button" class="pick" aria-pressed="false" data-film="busted-nuts" data-title="Busted Nuts" data-meta="Mountain bike trail&nbsp;· Dwellingup"><span class="pick__bar"><i></i></span><img src="assets/img/hero/trail-thumb.jpg" width="240" height="135" alt=""><span class="pick__label"><small>Trail</small> Busted Nuts</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Credentials">
+  <ul>
+    <li><b>CASA ReOC 6820</b><span>Certified drone operator since 2024</span></li>
+    <li><b>Since 2019</b><span>Filming across Western Australia</span></li>
+    <li><b>Live broadcast</b><span>All four days of the 2026 Australian Historic Road Racing Championship</span></li>
+    <li><b>150+</b><span>Films and livestreams on our YouTube channel</span></li>
+  </ul>
+</section>
+
+<section class="intro wrap" aria-label="What we do">
+  <div class="intro__main">
+    <p class="intro__lead">We fly customised FPV drones, piloted through goggles from the drone's point of view. That puts the camera beside a drift car mid-corner, or over the edge of Bluff Knoll.</p>
+    <p class="intro__list"><b>We film</b> circuit racing and drift, rally, motocross, mountain biking, jet sprint, off-road, coast and ranges, and burnout competitions.</p>
+  </div>
+  <div class="intro__who">
+    <h2 class="label">Who we film for</h2>
+    <dl>
+      <div><dt>Event organisers and clubs</dt><dd>A highlight film of your meeting, or the whole event broadcast live.</dd></div>
+      <div><dt>Brands and agencies</dt><dd>FPV footage for a campaign or launch, flown to your shot list.</dd></div>
+      <div><dt>Tourism and destinations</dt><dd>A film of your stretch of coast or your trail network, for visitor marketing.</dd></div>
+      <div><dt>Teams, drivers and riders</dt><dd>Footage of your season for sponsors, or a clip of your own run.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="films wrap" id="films" aria-labelledby="films-h">
+  <div class="section-head">
+    <h2 id="films-h">Films</h2>
+    <div class="filter" role="group" aria-label="Show films by type">
+      <button type="button" class="is-on" aria-pressed="true" data-filter="all">All</button>
+      <button type="button" aria-pressed="false" data-filter="motorsport">Motorsport</button>
+      <button type="button" aria-pressed="false" data-filter="action">Action<span> sport</span></button>
+      <button type="button" aria-pressed="false" data-filter="landscape">Landscape</button>
+    </div>
+  </div>
+  <p class="visually-hidden" id="filter-status" role="status"></p>
+
+  <ul class="film-grid" id="film-grid" data-filter="all">
+    <li class="film film--lead" data-cat="motorsport">
+      <a class="film__link" href="https://www.facebook.com/ExtremeLimitFilms/videos/1126965843177937/" data-film="the-kraken" data-file="assets/video/films/the-kraken.mp4" data-note="42 second excerpt, no sound." data-preview="assets/video/previews/the-kraken.mp4">
+        <span class="film__media"><img src="assets/img/films/the-kraken.jpg" srcset="assets/img/films/the-kraken.jpg 960w, assets/img/films/the-kraken-1600.jpg 1600w" sizes="(min-width: 1000px) 62vw, 100vw" width="1600" height="900" loading="lazy" decoding="async" alt="Jet sprint boat throwing spray through a turn at night, filmed from an FPV drone"><span class="film__time">1:15</span></span>
+        <span class="film__text"><b class="film__title">The Kraken</b><span class="film__meta">Jet sprint&nbsp;· West Coast Jet Sprint Club</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="motorsport">
+      <a class="film__link" href="https://www.youtube.com/watch?v=ZPvpCGlp9TM" data-film="targa-west" data-yt="ZPvpCGlp9TM" data-preview="assets/video/previews/targa-west.mp4">
+        <span class="film__media"><img src="assets/img/films/targa-west.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aerial view of a rally car on a road through white sand heath"><span class="film__time">3:45</span></span>
+        <span class="film__text"><b class="film__title">Targa West</b><span class="film__meta">Tarmac rally&nbsp;· 2019</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="landscape">
+      <a class="film__link" href="https://www.youtube.com/watch?v=nmuqmpUfRb0" data-film="steep-point" data-yt="nmuqmpUfRb0" data-preview="assets/video/previews/steep-point.mp4">
+        <span class="film__media"><img src="assets/img/films/steep-point.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Aerial view of a turquoise bay and four-wheel drives on the beach at Steep Point"><span class="film__time">1:24</span></span>
+        <span class="film__text"><b class="film__title">Steep Point</b><span class="film__meta">Shark Bay&nbsp;· 2021</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="motorsport">
+      <a class="film__link" href="https://www.youtube.com/watch?v=EPSv5bA4lyU" data-film="drift-west" data-yt="EPSv5bA4lyU" data-preview="assets/video/previews/drift-west.mp4">
+        <span class="film__media"><img src="assets/img/films/drift-west.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Two drift cars in tyre smoke on the circuit at Barbagallo Raceway, seen from above"><span class="film__time">3:35</span></span>
+        <span class="film__text"><b class="film__title">Drift West</b><span class="film__meta">Outlaw Series round 3&nbsp;· Barbagallo Raceway&nbsp;· 2019</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="action">
+      <a class="film__link" href="https://www.youtube.com/watch?v=9TC-97hzLxA" data-film="brookton-pony-express" data-yt="9TC-97hzLxA">
+        <span class="film__media"><img src="assets/img/films/brookton-pony-express.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Motocross riders on a red dirt track between green paddocks at Brookton"><span class="film__time">2:45</span></span>
+        <span class="film__text"><b class="film__title">Brookton Pony Express</b><span class="film__meta">Motocross&nbsp;· round 2&nbsp;· 2020</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="action">
+      <a class="film__link" href="https://www.facebook.com/ExtremeLimitFilms/videos/3452845051472810/" data-film="busted-nuts" data-file="assets/video/films/busted-nuts.mp4" data-note="34 second excerpt, no sound." data-preview="assets/video/previews/busted-nuts.mp4">
+        <span class="film__media"><img src="assets/img/films/busted-nuts.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Mountain bike rider on a red dirt berm in the bush near Dwellingup"><span class="film__time">2:35</span></span>
+        <span class="film__text"><b class="film__title">Busted Nuts</b><span class="film__meta">Mountain bike trail&nbsp;· Dwellingup&nbsp;· 2020</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="landscape">
+      <a class="film__link" href="https://www.facebook.com/ExtremeLimitFilms/videos/757066262107797/" data-film="the-pinnacle" data-file="assets/video/films/the-pinnacle.mp4" data-note="No sound." data-max="800" data-preview="assets/video/previews/the-pinnacle.mp4">
+        <span class="film__media"><img src="assets/img/films/the-pinnacle.jpg" width="640" height="360" loading="lazy" decoding="async" alt="A rock pinnacle beside the cliffs of Bluff Knoll at sunset"><span class="film__time">0:53</span></span>
+        <span class="film__text"><b class="film__title">The Pinnacle</b><span class="film__meta">Bluff Knoll&nbsp;· Stirling Range&nbsp;· 2022</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="motorsport">
+      <a class="film__link" href="https://www.youtube.com/watch?v=44aqL-Z3T1M" data-film="d1wa-round-5" data-yt="44aqL-Z3T1M" data-ratio="9:16" data-preview="assets/video/previews/d1wa-round-5.mp4">
+        <span class="film__media"><img src="assets/img/films/d1wa-round-5.jpg" width="960" height="540" loading="lazy" decoding="async" alt="FPV drone close behind two drift cars at a D1WA round"><span class="film__time">0:21</span></span>
+        <span class="film__text"><b class="film__title">D1WA Round 5</b><span class="film__meta">Drift&nbsp;· 2025</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="landscape">
+      <a class="film__link" href="https://www.youtube.com/watch?v=ZJW_Tr25X6k" data-film="windy-harbour" data-yt="ZJW_Tr25X6k">
+        <span class="film__media"><img src="assets/img/films/windy-harbour.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Low flight over turquoise surf at Windy Harbour"><span class="film__time">1:05</span></span>
+        <span class="film__text"><b class="film__title">Windy Harbour</b><span class="film__meta">South coast, Western Australia</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="action">
+      <a class="film__link" href="https://www.facebook.com/ExtremeLimitFilms/videos/1625403865839106/" data-film="side-by-side" data-file="assets/video/films/side-by-side.mp4" data-note="19 second excerpt, no sound." data-ratio="9:16" data-preview="assets/video/previews/side-by-side.mp4">
+        <span class="film__media"><img src="assets/img/films/side-by-side.jpg" width="720" height="405" loading="lazy" decoding="async" alt="Side-by-side vehicle on a red dirt track, seen from behind"><span class="film__time">0:59</span></span>
+        <span class="film__text"><b class="film__title">Side-by-side adventure</b><span class="film__meta">Off-road&nbsp;· 2026</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="landscape">
+      <a class="film__link" href="https://www.youtube.com/watch?v=ls5BeaGUyh4" data-film="madakaripura-waterfall" data-yt="ls5BeaGUyh4">
+        <span class="film__media"><img src="assets/img/films/madakaripura-waterfall.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Looking down a narrow green gorge at Madakaripura Waterfall"><span class="film__time">0:36</span></span>
+        <span class="film__text"><b class="film__title">Madakaripura Waterfall</b><span class="film__meta">East Java, Indonesia</span></span>
+      </a>
+    </li>
+    <li class="film" data-cat="motorsport">
+      <a class="film__link" href="https://www.youtube.com/watch?v=s7sqLqt_NhU" data-film="skidfest" data-yt="s7sqLqt_NhU" data-preview="assets/video/previews/skidfest.mp4">
+        <span class="film__media"><img src="assets/img/films/skidfest.jpg" width="960" height="540" loading="lazy" decoding="async" alt="A yellow car on a burnout pad at golden hour, trailing tyre smoke"><span class="film__time">1:23</span></span>
+        <span class="film__text"><b class="film__title">Skidfest</b><span class="film__meta">Burnout competition&nbsp;· 2025</span></span>
+      </a>
+    </li>
+  </ul>
+  <p class="films__more">These are twelve of more than 150. <a href="https://www.youtube.com/@extremelimitfilms2797">The rest are on our YouTube channel.</a></p>
+</section>
+
+<section class="live" id="live" aria-labelledby="live-h">
+  <div class="wrap">
+    <div class="live__desk">
+      <div class="live__wall">
+        <button class="screen" type="button" id="live-screen" aria-label="Play the replay: Australian Historic Road Racing Championship 2026, day 2">
+          <img class="is-on" src="assets/img/live/historic-road-racing-day-2.jpg" width="1088" height="612" loading="lazy" decoding="async" alt="">
+          <span class="screen__tag">Replay</span>
+          <span class="screen__play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          <span class="screen__cap" id="live-cap">Australian Historic Road Racing Championship 2026, day 2</span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
+        <ul class="crew">
+          <li><img src="assets/img/crew/multiview.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Production monitor showing four camera feeds side by side"><span>Four camera feeds on the production monitor</span></li>
+          <li><img src="assets/img/crew/vision-mix.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Laptop running the live vision mix"><span>The vision mix, run from a laptop</span></li>
+          <li><img src="assets/img/crew/launch-pad.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Camera drone sitting on its launch pad"><span>A camera drone on its launch pad</span></li>
+        </ul>
+      </div>
+      <div class="live__run">
+        <div class="live__head">
+          <h2 id="live-h"><span class="live__dot" aria-hidden="true"></span>Live broadcast</h2>
+          <p class="lead">We stream multi-camera broadcasts to YouTube, cutting between drone and trackside cameras, with live timing on screen. In September 2026 we broadcast all four days of the Australian Historic Road Racing Championship from Collie Motorplex.</p>
+        </div>
+        <div class="live__list">
+        <h3 class="label">Replays</h3>
+        <ol class="replays" id="replays">
+          <li><a class="is-on" href="https://www.youtube.com/watch?v=hpTYT_qx294" data-yt="hpTYT_qx294" data-still="assets/img/live/historic-road-racing-day-2.jpg"><b>Australian Historic Road Racing Championship 2026, day 2</b><span>Collie Motorplex&nbsp;· 6.9 hours</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/watch?v=sOFlPESSDbo" data-yt="sOFlPESSDbo" data-still="assets/img/live/historic-road-racing-day-3.jpg"><b>Australian Historic Road Racing Championship 2026, day 3</b><span>Collie Motorplex&nbsp;· 5.1 hours</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/watch?v=LiXTEb-9RYM" data-yt="LiXTEb-9RYM" data-still="assets/img/live/d1wa-final.jpg"><b>D1WA Drift Championship 2026, Pro Am and Pro Final</b><span>Season final&nbsp;· 29 August 2026</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.youtube.com/watch?v=VL52UZPkdps" data-yt="VL52UZPkdps" data-still="assets/img/live/bindoon-burnouts.jpg"><b>Bindoon Burnouts 2026</b><span>5.6 hours</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></a></li>
+        </ol>
+        <p class="live__next"><a class="btn" href="#enquire" data-enquiry="Live broadcast">Plan a broadcast</a><a class="text-link" href="https://www.youtube.com/@extremelimitfilms2797/streams">More replays on YouTube</a></p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="services wrap split" id="services" aria-labelledby="services-h">
+  <h2 id="services-h">Services</h2>
+  <ul class="rows">
+    <li><h3>Event films</h3><p>We film the whole meeting and cut a highlight film for the organiser, plus short clips for social.</p></li>
+    <li><h3>Live broadcast</h3><p>A multi-camera stream to YouTube with drone and trackside cameras and live timing on screen. The replay stays up afterwards.</p></li>
+    <li><h3>Brand and sponsor content</h3><p>Footage built around your product or your sponsor. Send us a shot list and we'll plan the flights to match.</p></li>
+    <li><h3>Destination films</h3><p>Low-level flights over coast and country. We've flown Steep Point, Bluff Knoll and Windy Harbour, and overseas at Mount Bromo and in the Dolomites.</p></li>
+    <li><h3>Season coverage</h3><p>The same crew at every round, so your series looks consistent from the first round to the last.</p></li>
+    <li><h3>Competitor clips</h3><p>Your own run, filmed from the drone. Book before the event and we'll send your clip after it.</p></li>
+  </ul>
+</section>
+
+<section class="said wrap" aria-label="From people we've filmed">
+  <figure class="quote">
+    <blockquote><p>I love drone footage of racing and would have a pilot on my dream team with live feed to pits.. to really get on top of my lines and how I could improve.</p></blockquote>
+    <figcaption>The Kraken WA Jet Sprint Team, on Facebook, November 2026</figcaption>
+  </figure>
+  <div class="events">
+    <h2 class="label">Events we've filmed</h2>
+    <p>The D1WA drift series, the Australian Historic Road Racing Championship, Targa West, West Coast Jet Sprint, the Brookton Pony Express and Bindoon Burnouts.</p>
+  </div>
+</section>
+
+<section class="about wrap" id="about" aria-labelledby="about-h">
+  <div class="about__top">
+    <img class="about__photo" src="assets/img/fleet.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Four FPV drones laid out around the Extreme Limit Films logo">
+    <div class="about__text">
+      <h2 id="about-h">About</h2>
+      <p class="lead">Extreme Limit Films is an FPV drone crew based in Perth. Since 2019 we've filmed motorsport and action sport around Western Australia, and we now broadcast events live as well.</p>
+      <dl class="spec">
+        <div><dt>Certificate</dt><dd>CASA ReOC 6820, issued January 2024</dd></div>
+        <div><dt>ABN</dt><dd>60 649 701 089</dd></div>
+        <div><dt>Aircraft</dt><dd>Customised FPV drones and camera drones</dd></div>
+        <div><dt>Based in</dt><dd>Perth, Western Australia</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="history">
+    <h3 class="label">History</h3>
+    <ol class="years">
+      <li><time datetime="2019">2019</time><p>First films: Drift West at Barbagallo Raceway and the Targa West rally.</p></li>
+      <li><time datetime="2020">2020</time><p>Motocross at Brookton and the Busted Nuts trail at Dwellingup.</p></li>
+      <li><time datetime="2021">2021</time><p>Jet sprint rounds, D1WA's King of the Motorplex and a trip to Steep Point.</p></li>
+      <li><time datetime="2022">2022</time><p>Two dives down Bluff Knoll.</p></li>
+      <li><time datetime="2024">2024</time><p>CASA operator's certificate issued in January. A season of burnout competitions.</p></li>
+      <li><time datetime="2026">2026</time><p>Live broadcasts of D1WA, Bindoon Burnouts and the Australian Historic Road Racing Championship.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="enquire wrap" id="enquire" aria-labelledby="enquire-h">
+  <div class="band">
+    <img src="assets/img/perth-bridge.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
+    <div class="band__copy">
+      <h2 id="enquire-h">Got a project coming up?</h2>
+      <p class="lead">Tell us what you're planning and when. We'll reply with a plan and a quote.</p>
+      <p class="band__mail"><a href="mailto:extremelimitfilms@outlook.com">extremelimitfilms@outlook.com</a></p>
+    </div>
+  </div>
+
+  <form class="form" id="enquiry-form" action="mailto:extremelimitfilms@outlook.com" method="post" enctype="text/plain">
+    <p class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></p>
+    <p class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></p>
+    <p class="field"><label for="f-phone">Phone <small>optional</small></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></p>
+    <p class="field"><label for="f-org">Organisation or event <small>optional</small></label><input id="f-org" name="organisation" type="text" autocomplete="organization"></p>
+    <fieldset class="field field--wide">
+      <legend>Project type</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="type" value="Motorsport event"><span>Motorsport event</span></label>
+        <label class="chip"><input type="radio" name="type" value="Action sport event"><span>Action sport event</span></label>
+        <label class="chip"><input type="radio" name="type" value="Live broadcast"><span>Live broadcast</span></label>
+        <label class="chip"><input type="radio" name="type" value="Brand or commercial"><span>Brand or commercial</span></label>
+        <label class="chip"><input type="radio" name="type" value="Tourism or destination"><span>Tourism or destination</span></label>
+        <label class="chip"><input type="radio" name="type" value="Competitor clips"><span>Competitor clips</span></label>
+        <label class="chip"><input type="radio" name="type" value="Other"><span>Other</span></label>
+      </div>
+    </fieldset>
+    <p class="field"><label for="f-dates">Date or dates</label><input id="f-dates" name="dates" type="text"></p>
+    <p class="field"><label for="f-place">Venue or town</label><input id="f-place" name="location" type="text"></p>
+    <fieldset class="field field--wide">
+      <legend>What you need</legend>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="need" value="Highlight film"><span>Highlight film</span></label>
+        <label class="chip"><input type="checkbox" name="need" value="Live broadcast"><span>Live broadcast</span></label>
+        <label class="chip"><input type="checkbox" name="need" value="Social clips"><span>Social clips</span></label>
+        <label class="chip"><input type="checkbox" name="need" value="Raw footage"><span>Raw footage</span></label>
+      </div>
+    </fieldset>
+    <p class="field field--wide"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></p>
+    <div class="form__send field--wide">
+      <button class="btn" type="submit">Send enquiry</button>
+      <p>This opens your email app with the details filled in. Nothing is sent until you press send there.</p>
+    </div>
+    <div class="form__status field--wide" id="enquiry-status" role="status" hidden>
+      <p><b>Your email app should now be open with the enquiry filled in.</b> If it didn't open, <a id="enquiry-mailto" href="mailto:extremelimitfilms@outlook.com">try again</a>, or copy the text below and send it to extremelimitfilms@outlook.com.</p>
+      <textarea id="enquiry-text" rows="8" readonly aria-label="Your enquiry as text"></textarea>
+      <p><button class="btn btn--line btn--sm" type="button" id="enquiry-copy">Copy the text</button></p>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="site-footer__about">
+      <img src="assets/img/logo-full.png" width="190" height="102" loading="lazy" decoding="async" alt="Extreme Limit Films">
+      <p>Based in Perth. We've filmed at Wanneroo, Collie, Dwellingup, Brookton, Bindoon, Bunbury, Albany, Katanning and Narrogin.</p>
+    </div>
+    <nav aria-label="Footer">
+      <h2 class="label">On this page</h2>
+      <ul>
+        <li><a href="#films">Films</a></li>
+        <li><a href="#live">Live broadcast</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#enquire">Get a quote</a></li>
+      </ul>
     </nav>
-  </header>
-  
-  <!-- Main Content -->
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content container">
-        <h1>Welcome to Extreme Limit Films</h1>
-        <p>Capturing high-adrenaline moments with FPV drone technology.</p>
-        <a href="#contact" class="btn btn-primary btn-lg mt-4">Get In Touch</a>
-      </div>
-    </section>
-    
-    <!-- Live Stream Section -->
-    <section class="container">
-      <div class="row">
-        <div class="col-12 mb-4">
-          <h2 class="text-center">Live Stream</h2>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QVrLE1LQ2-4"
-              allowfullscreen title="YouTube Live Stream" loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Highlights Gallery Section -->
-    <section id="highlights" class="container">
-      <h2 class="text-center">Recent Highlights</h2>
-      <div class="row gallery">
-        <!-- Video 1 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/4002085700075918" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights001.png" alt="Video Thumbnail 1" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 2 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1557150398317523" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights002.png" alt="Video Thumbnail 2" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 3 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2033268543844124" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights003.png" alt="Video Thumbnail 3" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 4 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1407787753124844" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights004.png" alt="Video Thumbnail 4" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 5 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/757066262107797" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights006.png" alt="Video Thumbnail 5" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 6 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/799807070739507" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights007.png" alt="Video Thumbnail 6" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 7 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/2729758130649517" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights008.png" alt="Video Thumbnail 7" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 8 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/1610791192418915" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights009.png" alt="Video Thumbnail 8" loading="lazy">
-          </a>
-        </div>
-        <!-- Video 9 -->
-        <div class="col-sm-6 col-md-4">
-          <a href="#" class="video-thumbnail" data-video="https://www.facebook.com/ExtremeLimitFilms/videos/766351070982162" data-toggle="modal"
-            data-target="#videoModal">
-            <img src="./assets/images/highlights010.png" alt="Video Thumbnail 10" loading="lazy">
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="videoModalLabel">Watch Video</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="" id="videoModalIframe" allowfullscreen title="Facebook Video"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h2 class="label">Watch and follow</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/@extremelimitfilms2797">YouTube</a></li>
+        <li><a href="https://www.facebook.com/ExtremeLimitFilms">Facebook</a></li>
+        <li><a href="https://www.instagram.com/extremelimit/">Instagram</a></li>
+        <li><a href="https://www.threads.com/@extremelimit">Threads</a></li>
+      </ul>
     </div>
-    
-    <!-- About Us Section -->
-    <section id="about" class="bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 order-md-2">
-            <h2>About Us</h2>
-            <p>Extreme Limit Films is a premier FPV drone filming company specializing in high-octane events like drift, burnout, motocross, and downhill mountain biking. Our mission is to capture the adrenaline and precision of every event through innovative and cinematic perspectives.</p>
-          </div>
-          <div class="col-md-6 order-md-1">
-            <img src="./assets/images/about-photo.jpg" alt="Our Team in Action" class="about-img" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section id="services">
-      <div class="container">
-        <h2 class="text-center">Our Services</h2>
-        <div class="row text-center mt-4">
-          <div class="col-md-4">
-            <h3>FPV Drone Filming</h3>
-            <p>Dynamic FPV drone filming for drift, burnout, motocross, and mountain biking events. Experience action like never before.</p>
-          </div>
-          <div class="col-md-4">
-            <h3>Event Coverage</h3>
-            <p>We capture every thrilling moment of high-energy events, ensuring every detail is recorded from unique perspectives.</p>
-          </div>
-          <div class="col-md-4">
-            <h3>Post-Production</h3>
-            <p>Expert editing and color grading to deliver cinematic-quality videos that bring events to life.</p>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-12 text-center">
-            <h3>Our Equipment</h3>
-            <p>Utilizing state-of-the-art FPV drones, stabilization systems, and advanced editing tools to provide innovative footage.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="form-group">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" class="form-control" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" class="form-control" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" class="form-control" rows="5" required aria-required="true"></textarea>
-          </div>
-          <!-- Honeypot for spam prevention -->
-          <div style="display:none;">
-            <label>Don’t fill this out if you're human:
-              <input type="text" name="bot-field">
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-        <div class="mt-5">
-          <h3 class="text-center">Our Location</h3>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.702194790683!2d115.79392131532598!3d-31.95231288135945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a362cfb1e807%3A0x5017d681632cf0!2sPerth%20WA%2C%20Australia!5e0!3m2!1sen!2sus!4v1690872191191!5m2!1sen!2sus" allowfullscreen aria-hidden="false" tabindex="0" title="Google Map Location" loading="lazy"></iframe>
-          </div>
-          <div class="mt-3 text-center">
-            <a href="https://www.facebook.com/YourPage" target="_blank" class="mr-2">Facebook</a>
-            <a href="https://www.instagram.com/YourProfile" target="_blank" class="mr-2">Instagram</a>
-            <a href="https://www.youtube.com/channel/YourChannel" target="_blank">YouTube</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Facebook Live Section -->
-    <section id="facebook-live">
-      <div class="container">
-        <h2 class="text-center">Facebook Live</h2>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ExtremeLimitFilms/videos/924996816098688/&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true" title="Facebook Live Video" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Extreme Limit Films. All Rights Reserved.</p>
+  </div>
+  <p class="legal"><span>© 2026 Extreme Limit Films</span> <span>ABN 60 649 701 089</span> <span>CASA ReOC 6820</span></p>
+</footer>
+
+<nav class="quick" id="quick" aria-label="Quick contact">
+  <a href="mailto:extremelimitfilms@outlook.com">Email</a>
+  <a class="quick__go" href="#enquire">Get a quote</a>
+</nav>
+
+<dialog class="menu" id="menu" aria-label="Menu">
+  <div class="menu__bar">
+    <span class="brand"><img src="assets/img/logo-mark.png" width="40" height="34" alt=""><span class="brand__name"><b>Extreme Limit</b><i>Films</i></span></span>
+    <button class="menu-btn" type="button" data-close>Close</button>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#films">Films</a>
+    <a href="#live">Live broadcast</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#enquire">Get a quote</a>
+  </nav>
+  <p class="menu__foot"><a href="mailto:extremelimitfilms@outlook.com">extremelimitfilms@outlook.com</a></p>
+</dialog>
+
+<dialog class="player" id="player" aria-labelledby="player-title">
+  <div class="player__in">
+    <div class="player__bar">
+      <div><h2 id="player-title"></h2><p id="player-meta"></p></div>
+      <button class="menu-btn" type="button" data-close>Close</button>
     </div>
-  </footer>
-  
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.video-thumbnail').on('click', function (e) {
-        e.preventDefault();
-        var videoUrl = $(this).data('video');
-        var embedUrl = 'https://www.facebook.com/plugins/video.php?href=' + encodeURIComponent(videoUrl) + '&show_text=0&width=560';
-        $('#videoModalIframe').attr('src', embedUrl);
-      });
-      $('#videoModal').on('hidden.bs.modal', function () {
-        $('#videoModalIframe').attr('src', '');
-      });
-    });
-  </script>
+    <div class="player__frame" id="player-frame"></div>
+    <p class="player__foot"><span id="player-note"></span> <a class="text-link" id="player-link" href="#" target="_blank" rel="noopener"></a></p>
+  </div>
+</dialog>
+
 </body>
 </html>
