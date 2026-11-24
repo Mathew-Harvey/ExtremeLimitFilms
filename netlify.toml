@@ -1,0 +1,10 @@
+# Netlify reads this file each time it builds the site.
+#
+# The new site is on show at GitHub Pages first. Until launch, Netlify skips
+# its builds, so the address that is live today keeps showing the old site.
+#
+# At launch, delete this file and Netlify will publish the main branch again.
+
+[build]
+  # "exit 0" tells Netlify there is nothing new to build, so it skips the build.
+  ignore = "exit 0"
