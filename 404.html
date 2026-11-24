@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Extreme Limit Films</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090C">
+<meta name="color-scheme" content="dark">
+<!-- This page can be served from any address, so it carries its own styles and loads nothing else. -->
+<style>
+  * { box-sizing: border-box; }
+  html { background: #07090C; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 32px 24px;
+    background: #07090C;
+    color: #EEF1F4;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { width: 100%; max-width: 520px; }
+  .brand {
+    margin: 0 0 56px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #C6CDD6;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 7vw, 44px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+  p { margin: 18px 0 0; color: #C6CDD6; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; margin-top: 32px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 28px;
+    border-radius: 2px;
+    background: #EEF1F4;
+    color: #06090C;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .btn:hover { background: #fff; }
+  .mail { color: #EEF1F4; text-decoration-color: #3CC8FF; text-decoration-thickness: 1px; text-underline-offset: 6px; overflow-wrap: anywhere; }
+  :focus-visible { outline: 2px solid #3CC8FF; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">Extreme Limit Films</p>
+  <h1>That page isn't here.</h1>
+  <p>The address may be out of date. The films, live replays and enquiry form are all on the home page.</p>
+  <p class="actions">
+    <a class="btn" id="home" href="./">Go to the home page</a>
+    <a class="mail" href="mailto:extremelimitfilms@outlook.com">extremelimitfilms@outlook.com</a>
+  </p>
+</main>
+<script>
+  // On GitHub Pages the site lives in a folder named after the repository; anywhere else it is at the root.
+  (function () {
+    var first = location.pathname.split('/')[1] || '';
+    var onPages = /\.github\.io$/.test(location.hostname) && first;
+    document.getElementById('home').href = onPages ? '/' + first + '/' : '/';
+  })();
+</script>
+</body>
+</html>

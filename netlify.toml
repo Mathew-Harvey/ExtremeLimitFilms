@@ -1,0 +1,15 @@
+# Netlify reads this file each time it builds the site.
+#
+# The new site is on show at GitHub Pages first. Until launch, Netlify skips
+# every build of the main branch, so the address that is live today keeps
+# showing the old site. Pull request previews still build.
+#
+# At launch, delete this file and Netlify will publish the main branch again.
+
+[build]
+  # "exit 0" tells Netlify there is nothing new to build, so it skips the build.
+  ignore = "exit 0"
+
+[context.deploy-preview]
+  # "exit 1" tells Netlify to go ahead, so each pull request still gets a preview.
+  ignore = "exit 1"
