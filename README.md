@@ -6,6 +6,8 @@ Preview: https://mathew-harvey.github.io/ExtremeLimitFilms/
 
 It is a plain static site: one page, one stylesheet and one script. There is no build step and nothing to install. GitHub Pages serves the `main` branch as it is.
 
+Netlify is connected to this repository as well. `netlify.toml` stops it publishing the `main` branch, so the older site at the Netlify address stays up until launch. Netlify still builds a preview for each pull request.
+
 ## What is where
 
 | Path | What it holds |
@@ -57,6 +59,7 @@ All footage on the page gets the same slight grade from one line of CSS (`--grad
 
 ## Before it goes live on its own domain
 
+- Delete `netlify.toml` if the site will be hosted on Netlify. Until then it stops Netlify publishing the `main` branch.
 - Take out the `noindex` line in the head of `index.html`. It keeps this preview out of search results.
 - Change the `og:image` address to the new domain and add a canonical link.
 - The enquiry form opens the visitor's email app. Swap it for a hosted form so enquiries arrive without that step.
