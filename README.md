@@ -17,6 +17,7 @@ Netlify is connected to this repository as well. `netlify.toml` stops it publish
 | `assets/css/site.css` | Styles, in the same order as the page |
 | `assets/js/site.js` | Hero footage, film player, filter, live replays, enquiry form |
 | `assets/img/` | Stills, logo, icons and the social preview image (`og.jpg`) |
+| `assets/img/clients/` | The client logos, redrawn in white for the dark page |
 | `assets/video/hero/` | The four hero clips, muted, 10 to 15 seconds each |
 | `assets/video/previews/` | Six-second loops that play when the pointer is over a film |
 | `assets/video/films/` | Muted excerpts of the four films that are only on Facebook |
@@ -53,6 +54,25 @@ The film with the class `film--lead` is the large one.
 
 The replays are the four links in `<ol id="replays">`. Each needs its YouTube link, its `data-yt` id, a title and one line of detail. The stills on the screen beside the list are the four images in `#live-screen`, in the same order.
 
+## Change the client logos
+
+Each logo is one `<li>` in `<ul class="logos">` in `index.html`, in the order the client gave. The files are in `assets/img/clients/`.
+
+- A logo is white artwork on a clear background: an SVG, or a PNG about two and a half times its drawn size.
+- The `width` and `height` on each `<img>` set the size it is drawn at. They were chosen by eye so the set looks even: a wide wordmark is about 150 pixels wide, a badge about 70 pixels tall.
+- The `alt` is the organisation's name.
+- The board is laid out for thirteen logos so that no row has an empty tile: seven and six on a desktop, five, four and four on a tablet, and pairs on a phone with the last one full width. Add or remove a logo and the spans under `.logos` in `site.css` need changing to match.
+
+The logos were made from each organisation's own published logo. Where an organisation sends its own white version, use that instead.
+
+## Lines waiting on the client
+
+Anything with the class `todo` is a placeholder and shows in grey italics. Today that is 2023 and 2025 in the history, and the "Other licences" row under Capabilities. Replace the text and take the class off.
+
+## The logo in the header
+
+The header shows the mark (`logo-mark.png`) beside the brush lettering (`logo-wordmark.png`). The lettering was cut from `logo-full.png`, which the footer uses whole. If the client sends the original artwork, export the three files again at the same sizes.
+
 ## Stills and video
 
 All footage on the page gets the same slight grade from one line of CSS (`--grade` in `site.css`), so files go in ungraded. The clips have no audio track. Keep hero clips under about 4.5 MB and previews under about 600 KB, or the page gets slow on a phone.
@@ -62,6 +82,8 @@ All footage on the page gets the same slight grade from one line of CSS (`--grad
 - Delete `netlify.toml` if the site will be hosted on Netlify. Until then it stops Netlify publishing the `main` branch.
 - Take out the `noindex` line in the head of `index.html`. It keeps this preview out of search results.
 - Change the `og:image` address to the new domain and add a canonical link.
+- Fill in the lines marked `todo` (see above).
+- Check that each organisation in the Clients section is happy for its logo to be shown.
 - The enquiry form opens the visitor's email app. Swap it for a hosted form so enquiries arrive without that step.
 - Put the four Facebook-only films on YouTube and replace their `data-file` with `data-yt`, so visitors get the full films with sound.
 - Replace the hero clips with cuts from the original footage if it is available. The current clips come from 720p copies.
