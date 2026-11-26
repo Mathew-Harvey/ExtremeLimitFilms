@@ -363,11 +363,9 @@
 
   const form = $('#enquiry-form');
   if (form) {
-    // Links such as "Plan a broadcast" arrive with the project type already chosen.
-    $$('[data-enquiry]').forEach((a) => a.addEventListener('click', () => {
-      const pick = $$('input[name="type"]', form).find((input) => input.value === a.dataset.enquiry);
-      if (pick) pick.checked = true;
-    }));
+    // Links such as "Plan a broadcast" name what the enquiry is about. It goes in the email subject.
+    let topic = '';
+    $$('[data-enquiry]').forEach((a) => a.addEventListener('click', () => { topic = a.dataset.enquiry; }));
 
     const status = $('#enquiry-status');
     const text = $('#enquiry-text');
@@ -378,22 +376,17 @@
       e.preventDefault();
       const data = new FormData(form);
       const value = (name) => (data.get(name) || '').toString().trim();
-      const type = value('type');
       const lines = [
         ['Name', value('name')],
         ['Email', value('email')],
         ['Phone', value('phone')],
         ['Organisation or event', value('organisation')],
-        ['Project type', type],
-        ['Date or dates', value('dates')],
-        ['Venue or town', value('location')],
-        ['What we need', data.getAll('need').join(', ')],
       ].filter((line) => line[1]).map((line) => line[0] + ': ' + line[1]);
       const message = value('message');
       if (message) lines.push('', message);
 
       const body = lines.join('\n');
-      const subject = 'Website enquiry' + (type ? ': ' + type : '');
+      const subject = 'Website enquiry' + (topic ? ': ' + topic : '');
       const href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       text.value = body;
       retry.href = href;
