@@ -115,11 +115,14 @@
       e.preventDefault();
       openPlayer(filmFrom(a));
     }));
-    const heroFilm = $('[data-open-film]');
-    if (heroFilm) heroFilm.addEventListener('click', () => {
-      const a = $('.film__link[data-film="' + heroFilm.dataset.openFilm + '"]');
-      if (a) openPlayer(filmFrom(a));
-    });
+    // Anything else that names a film opens it too: the button in the hero, and the link on a service card.
+    $$('[data-open-film]').forEach((el) => el.addEventListener('click', (e) => {
+      const a = $('.film__link[data-film="' + el.dataset.openFilm + '"]');
+      // A link keeps its ordinary behaviour for a ctrl or middle click, as the film tiles do.
+      if (!a || (el.tagName === 'A' && !plainClick(e))) return;
+      e.preventDefault();
+      openPlayer(filmFrom(a));
+    }));
   }
 
   /* ---------- Hero: four clips, one after the other ---------- */
